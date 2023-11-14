@@ -76,7 +76,9 @@ const CardDetails = () => {
         "Content-Type": "application/json"
       }
 
-      const response = await fetch("http://localhost:7000/api/create-checkout-session", {
+      const base_url = "https://mern-e-comm-backend.onrender.com";
+
+      const response = await fetch(`${base_url}/api/create-checkout-session`, {
         method: "POST",
         headers: headers,
         body: JSON.stringify(body)
